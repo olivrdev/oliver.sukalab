@@ -219,8 +219,9 @@
                 <div class="mb-20">
                     <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                         <!-- Video -->
-                        <div class="relative rounded-2xl overflow-hidden bg-soft-black aspect-video shadow-2xl">
+                        <div class="relative rounded-2xl overflow-hidden bg-soft-black aspect-video shadow-2xl group">
                             <video
+                                id="index-video"
                                 class="w-full h-full object-cover"
                                 autoplay
                                 loop
@@ -231,6 +232,22 @@
                                 <source src="https://www.ctrlai.com/index_60s.mp4" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
+                            <!-- Sound Toggle Button -->
+                            <button
+                                id="index-sound-btn"
+                                class="absolute bottom-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg"
+                                aria-label="Toggle sound"
+                            >
+                                <!-- Muted Icon -->
+                                <svg class="w-5 h-5 text-soft-black muted-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/>
+                                </svg>
+                                <!-- Unmuted Icon (hidden by default) -->
+                                <svg class="w-5 h-5 text-soft-black unmuted-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+                                </svg>
+                            </button>
                         </div>
                         <!-- Content -->
                         <div>
@@ -280,13 +297,14 @@
                 </div>
 
                 <!-- App Showcase: Talking Scanner -->
-                <div class="mb-20">
+                <div>
                     <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
                         <!-- Content (reversed order on desktop) -->
                         <div class="lg:order-2">
                             <!-- Video (Portrait) -->
-                            <div class="relative rounded-2xl overflow-hidden bg-soft-black max-w-[280px] mx-auto shadow-2xl">
+                            <div class="relative rounded-2xl overflow-hidden bg-soft-black max-w-[280px] mx-auto shadow-2xl group">
                                 <video
+                                    id="scanner-video"
                                     class="w-full h-full object-cover"
                                     autoplay
                                     loop
@@ -297,6 +315,22 @@
                                     <source src="https://www.ctrlai.com/talking-scanner-final.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                 </video>
+                                <!-- Sound Toggle Button -->
+                                <button
+                                    id="scanner-sound-btn"
+                                    class="absolute bottom-4 right-4 w-10 h-10 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors shadow-lg"
+                                    aria-label="Toggle sound"
+                                >
+                                    <!-- Muted Icon -->
+                                    <svg class="w-5 h-5 text-soft-black muted-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/>
+                                    </svg>
+                                    <!-- Unmuted Icon (hidden by default) -->
+                                    <svg class="w-5 h-5 text-soft-black unmuted-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                         <!-- Content -->
@@ -344,72 +378,6 @@
                             </a>
                         </div>
                     </div>
-                </div>
-
-                <!-- Other Projects Grid -->
-                <div class="mb-8">
-                    <h3 class="text-xl font-semibold mb-8">Other Projects</h3>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    <!-- Project Card 1: ControlAI Work -->
-                    <article class="project-card group border border-border-gray rounded-2xl overflow-hidden bg-off-white">
-                        <div class="aspect-[4/3] bg-gradient-to-br from-soft-black to-soft-black/80 flex items-center justify-center p-8">
-                            <div class="w-24 h-24 bg-white rounded-2xl shadow-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-12 h-12 text-soft-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <span class="inline-block px-3 py-1 text-xs font-medium bg-border-gray rounded-full mb-4">
-                                AI Agents / Workflow
-                            </span>
-                            <h3 class="text-xl font-semibold mb-2">ControlAI Prototypes</h3>
-                            <p class="text-muted text-sm leading-relaxed">
-                                Built and prototyped AI agents using OpenAI frameworks and Claude Code. Designed workflows to automate client-facing processes.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 2: Media Automation Pipeline -->
-                    <article class="project-card group border border-border-gray rounded-2xl overflow-hidden bg-off-white">
-                        <div class="aspect-[4/3] bg-gradient-to-br from-muted to-muted/80 flex items-center justify-center p-8">
-                            <div class="w-24 h-24 bg-white rounded-2xl shadow-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-12 h-12 text-soft-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <span class="inline-block px-3 py-1 text-xs font-medium bg-border-gray rounded-full mb-4">
-                                ElevenLabs / Sora / Suno
-                            </span>
-                            <h3 class="text-xl font-semibold mb-2">Media Automation Pipeline</h3>
-                            <p class="text-muted text-sm leading-relaxed">
-                                End-to-end automation for text-to-video and text-to-music generation workflows.
-                            </p>
-                        </div>
-                    </article>
-
-                    <!-- Project Card 3: Research Assistant Bot -->
-                    <article class="project-card group border border-border-gray rounded-2xl overflow-hidden bg-off-white">
-                        <div class="aspect-[4/3] bg-gradient-to-br from-soft-black/70 to-soft-black/50 flex items-center justify-center p-8">
-                            <div class="w-24 h-24 bg-white rounded-2xl shadow-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-12 h-12 text-soft-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                                </svg>
-                            </div>
-                        </div>
-                        <div class="p-6">
-                            <span class="inline-block px-3 py-1 text-xs font-medium bg-border-gray rounded-full mb-4">
-                                RAG / Local LLM
-                            </span>
-                            <h3 class="text-xl font-semibold mb-2">Research Assistant Bot</h3>
-                            <p class="text-muted text-sm leading-relaxed">
-                                A privacy-first internal tool for document research and operations support.
-                            </p>
-                        </div>
-                    </article>
                 </div>
             </div>
         </section>
@@ -590,6 +558,30 @@
                 mobileMenu.classList.add('hidden');
             });
         });
+
+        // Video Sound Toggle
+        function setupSoundToggle(videoId, buttonId) {
+            const video = document.getElementById(videoId);
+            const button = document.getElementById(buttonId);
+            const mutedIcon = button.querySelector('.muted-icon');
+            const unmutedIcon = button.querySelector('.unmuted-icon');
+
+            button.addEventListener('click', () => {
+                video.muted = !video.muted;
+
+                if (video.muted) {
+                    mutedIcon.classList.remove('hidden');
+                    unmutedIcon.classList.add('hidden');
+                } else {
+                    mutedIcon.classList.add('hidden');
+                    unmutedIcon.classList.remove('hidden');
+                }
+            });
+        }
+
+        // Initialize sound toggles for both videos
+        setupSoundToggle('index-video', 'index-sound-btn');
+        setupSoundToggle('scanner-video', 'scanner-sound-btn');
     </script>
 </body>
 </html>
