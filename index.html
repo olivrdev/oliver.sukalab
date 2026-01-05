@@ -215,18 +215,156 @@
                     <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Featured Work</h2>
                 </div>
 
-                <!-- Projects Grid -->
+                <!-- App Showcase: Index -->
+                <div class="mb-20">
+                    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                        <!-- Video -->
+                        <div class="relative rounded-2xl overflow-hidden bg-soft-black aspect-video shadow-2xl">
+                            <video
+                                class="w-full h-full object-cover"
+                                autoplay
+                                loop
+                                muted
+                                playsinline
+                                poster="docs/icon_512x512.png"
+                            >
+                                <source src="https://www.ctrlai.com/index_60s.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                        <!-- Content -->
+                        <div>
+                            <div class="flex items-center gap-4 mb-6">
+                                <img src="docs/icon_512x512.png" alt="Index App Icon" class="w-16 h-16 rounded-xl shadow-lg">
+                                <div>
+                                    <span class="inline-block px-3 py-1 text-xs font-medium bg-border-gray rounded-full mb-1">
+                                        macOS / Local AI
+                                    </span>
+                                    <h3 class="text-2xl font-bold">Index</h3>
+                                </div>
+                            </div>
+                            <p class="text-lg text-muted mb-4">
+                                macOS Finder reimagined for the AI age.
+                            </p>
+                            <p class="text-muted leading-relaxed mb-6">
+                                A local AI application enabling semantic search of documents on Mac. Features OCR for receipts, contracts, and handwritten notes, document Q&A with citations, and text-to-speech with 10 neural voices. Runs entirely on-device using Apple Silicon — no cloud, no telemetry.
+                            </p>
+                            <ul class="space-y-2 text-sm text-muted mb-6">
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-soft-black" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Semantic search & document Q&A
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-soft-black" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    4B parameter LLM on-device
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-soft-black" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    100% offline, zero data collection
+                                </li>
+                            </ul>
+                            <a href="https://apps.apple.com/app/id6755788079" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-soft-black text-off-white rounded-full text-sm font-medium hover:bg-soft-black/80 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                                </svg>
+                                Download on App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- App Showcase: Talking Scanner -->
+                <div class="mb-20">
+                    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                        <!-- Content (reversed order on desktop) -->
+                        <div class="lg:order-2">
+                            <!-- Video (Portrait) -->
+                            <div class="relative rounded-2xl overflow-hidden bg-soft-black max-w-[280px] mx-auto shadow-2xl">
+                                <video
+                                    class="w-full h-full object-cover"
+                                    autoplay
+                                    loop
+                                    muted
+                                    playsinline
+                                    poster="docs/icon-talking-scanner.png"
+                                >
+                                    <source src="https://www.ctrlai.com/talking-scanner-final.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="lg:order-1">
+                            <div class="flex items-center gap-4 mb-6">
+                                <img src="docs/icon-talking-scanner.png" alt="Talking Scanner App Icon" class="w-16 h-16 rounded-xl shadow-lg">
+                                <div>
+                                    <span class="inline-block px-3 py-1 text-xs font-medium bg-border-gray rounded-full mb-1">
+                                        iPhone & iPad / Text-to-Speech
+                                    </span>
+                                    <h3 class="text-2xl font-bold">Talking Scanner</h3>
+                                </div>
+                            </div>
+                            <p class="text-lg text-muted mb-4">
+                                Scan pages. Listen anywhere.
+                            </p>
+                            <p class="text-muted leading-relaxed mb-6">
+                                Transform printed text into natural-sounding audio entirely on your device. Features document scanning with automatic edge detection, 10 premium AI voices, background playback with lock screen controls, and full audio library management. No internet required.
+                            </p>
+                            <ul class="space-y-2 text-sm text-muted mb-6">
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-soft-black" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    10 premium AI voices (US & UK English)
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-soft-black" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Background playback & speed control
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <svg class="w-4 h-4 text-soft-black" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    100% offline, no cloud uploads
+                                </li>
+                            </ul>
+                            <a href="https://apps.apple.com/app/talking-scanner" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2.5 bg-soft-black text-off-white rounded-full text-sm font-medium hover:bg-soft-black/80 transition-colors">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                                </svg>
+                                Download on App Store
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Projects Grid -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold mb-8">Other Projects</h3>
+                </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                    <!-- Project Card 1: ControlAI -->
+                    <!-- Project Card 1: ControlAI Work -->
                     <article class="project-card group border border-border-gray rounded-2xl overflow-hidden bg-off-white">
                         <div class="aspect-[4/3] bg-gradient-to-br from-soft-black to-soft-black/80 flex items-center justify-center p-8">
-                            <img src="docs/icon_512x512.png" alt="ControlAI Index App" class="w-24 h-24 rounded-2xl shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-24 h-24 bg-white rounded-2xl shadow-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-12 h-12 text-soft-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
                         </div>
                         <div class="p-6">
                             <span class="inline-block px-3 py-1 text-xs font-medium bg-border-gray rounded-full mb-4">
                                 AI Agents / Workflow
                             </span>
-                            <h3 class="text-xl font-semibold mb-2">ControlAI</h3>
+                            <h3 class="text-xl font-semibold mb-2">ControlAI Prototypes</h3>
                             <p class="text-muted text-sm leading-relaxed">
                                 Built and prototyped AI agents using OpenAI frameworks and Claude Code. Designed workflows to automate client-facing processes.
                             </p>
@@ -256,7 +394,11 @@
                     <!-- Project Card 3: Research Assistant Bot -->
                     <article class="project-card group border border-border-gray rounded-2xl overflow-hidden bg-off-white">
                         <div class="aspect-[4/3] bg-gradient-to-br from-soft-black/70 to-soft-black/50 flex items-center justify-center p-8">
-                            <img src="docs/icon-talking-scanner.png" alt="Talking Scanner App" class="w-24 h-24 rounded-2xl shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-24 h-24 bg-white rounded-2xl shadow-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-12 h-12 text-soft-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                                </svg>
+                            </div>
                         </div>
                         <div class="p-6">
                             <span class="inline-block px-3 py-1 text-xs font-medium bg-border-gray rounded-full mb-4">
