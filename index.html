@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oliver Súkala — AI Automation & Rapid Prototyping Specialist</title>
+    <meta name="description" content="I help teams move faster by turning ideas into working prototypes, automating workflows, and deploying practical AI agents.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="docs/icon_512x512.png">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                    colors: {
+                        'off-white': '#FAFAFA',
+                        'soft-black': '#171717',
+                        'border-gray': '#E5E5E5',
+                        'muted': '#737373',
+                    },
+                },
+            },
+        }
+    </script>
+
+    <style>
+        * {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        /* Custom selection color */
+        ::selection {
+            background-color: #171717;
+            color: #FAFAFA;
+        }
+
+        /* Smooth transitions for cards */
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Subtle animation for hero */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-delay-100 { animation-delay: 0.1s; }
+        .animate-delay-200 { animation-delay: 0.2s; }
+        .animate-delay-300 { animation-delay: 0.3s; }
+    </style>
+</head>
+
+<body class="bg-off-white text-soft-black antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-off-white/80 backdrop-blur-md border-b border-border-gray">
+        <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="text-xl font-bold tracking-tight hover:opacity-70 transition-opacity">
+                Oliver Súkala
+            </a>
+
+            <!-- Navigation Links -->
+            <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-muted">
+                <li>
+                    <a href="#services" class="hover:text-soft-black transition-colors">Services</a>
+                </li>
+                <li>
+                    <a href="#work" class="hover:text-soft-black transition-colors">Work</a>
+                </li>
+                <li>
+                    <a href="#experience" class="hover:text-soft-black transition-colors">Experience</a>
+                </li>
+                <li>
+                    <a href="#contact" class="hover:text-soft-black transition-colors">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-2 -mr-2 hover:bg-border-gray rounded-lg transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-border-gray bg-off-white">
+            <ul class="px-6 py-4 space-y-4 text-sm font-medium">
+                <li><a href="#services" class="block text-muted hover:text-soft-black transition-colors">Services</a></li>
+                <li><a href="#work" class="block text-muted hover:text-soft-black transition-colors">Work</a></li>
+                <li><a href="#experience" class="block text-muted hover:text-soft-black transition-colors">Experience</a></li>
+                <li><a href="#contact" class="block text-muted hover:text-soft-black transition-colors">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center pt-20">
+            <div class="max-w-6xl mx-auto px-6 py-24 md:py-32">
+                <div class="max-w-3xl">
+                    <!-- Headline -->
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] opacity-0 animate-fade-in">
+                        AI Automation &<br>Rapid Prototyping Specialist.
+                    </h1>
+
+                    <!-- Sub-headline -->
+                    <p class="mt-6 text-lg md:text-xl text-muted leading-relaxed max-w-2xl opacity-0 animate-fade-in animate-delay-100">
+                        I help teams move faster by turning ideas into working prototypes, automating workflows, and deploying practical AI agents — often in days, not months.
+                    </p>
+
+                    <!-- CTA -->
+                    <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-6 opacity-0 animate-fade-in animate-delay-200">
+                        <a href="#work" class="inline-flex items-center gap-2 px-6 py-3 bg-soft-black text-off-white rounded-full font-medium hover:bg-soft-black/80 transition-colors">
+                            View Work
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </a>
+                        <span class="text-sm text-muted">
+                            Based in Prague. Available for remote collaboration.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-24 md:py-32 border-t border-border-gray">
+            <div class="max-w-6xl mx-auto px-6">
+                <!-- Section Header -->
+                <div class="mb-16">
+                    <p class="text-sm font-medium text-muted uppercase tracking-wider mb-3">Services</p>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">What I Can Help With</h2>
+                </div>
+
+                <!-- Services Grid -->
+                <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Service Card 1 -->
+                    <article class="p-8 border border-border-gray rounded-2xl bg-white hover:border-soft-black/20 transition-colors">
+                        <div class="w-12 h-12 mb-6 flex items-center justify-center bg-soft-black rounded-xl">
+                            <svg class="w-6 h-6 text-off-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">AI Agents & Automation</h3>
+                        <p class="text-muted leading-relaxed">
+                            Building agents to automate internal workflows and marketing pipelines.
+                        </p>
+                    </article>
+
+                    <!-- Service Card 2 -->
+                    <article class="p-8 border border-border-gray rounded-2xl bg-white hover:border-soft-black/20 transition-colors">
+                        <div class="w-12 h-12 mb-6 flex items-center justify-center bg-soft-black rounded-xl">
+                            <svg class="w-6 h-6 text-off-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Rapid Prototyping</h3>
+                        <p class="text-muted leading-relaxed">
+                            Turning product ideas into working features in 1–3 days using Cursor and V0.
+                        </p>
+                    </article>
+
+                    <!-- Service Card 3 -->
+                    <article class="p-8 border border-border-gray rounded-2xl bg-white hover:border-soft-black/20 transition-colors">
+                        <div class="w-12 h-12 mb-6 flex items-center justify-center bg-soft-black rounded-xl">
+                            <svg class="w-6 h-6 text-off-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Local & Private AI</h3>
+                        <p class="text-muted leading-relaxed">
+                            Deploying local LLMs (Qwen3, Granite) for privacy-sensitive data.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Work Section -->
+        <section id="work" class="py-24 md:py-32 border-t border-border-gray bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <!-- Section Header -->
+                <div class="mb-16">
+                    <p class="text-sm font-medium text-muted uppercase tracking-wider mb-3">Portfolio</p>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Featured Work</h2>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                    <!-- Project Card 1: ControlAI -->
+                    <article class="project-card group border border-border-gray rounded-2xl overflow-hidden bg-off-white">
+                        <div class="aspect-[4/3] bg-gradient-to-br from-soft-black to-soft-black/80 flex items-center justify-center p-8">
+                            <img src="docs/icon_512x512.png" alt="ControlAI Index App" class="w-24 h-24 rounded-2xl shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block px-3 py-1 text-xs font-medium bg-border-gray rounded-full mb-4">
+                                AI Agents / Workflow
+                            </span>
+                            <h3 class="text-xl font-semibold mb-2">ControlAI</h3>
+                            <p class="text-muted text-sm leading-relaxed">
+                                Built and prototyped AI agents using OpenAI frameworks and Claude Code. Designed workflows to automate client-facing processes.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 2: Media Automation Pipeline -->
+                    <article class="project-card group border border-border-gray rounded-2xl overflow-hidden bg-off-white">
+                        <div class="aspect-[4/3] bg-gradient-to-br from-muted to-muted/80 flex items-center justify-center p-8">
+                            <div class="w-24 h-24 bg-white rounded-2xl shadow-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-12 h-12 text-soft-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block px-3 py-1 text-xs font-medium bg-border-gray rounded-full mb-4">
+                                ElevenLabs / Sora / Suno
+                            </span>
+                            <h3 class="text-xl font-semibold mb-2">Media Automation Pipeline</h3>
+                            <p class="text-muted text-sm leading-relaxed">
+                                End-to-end automation for text-to-video and text-to-music generation workflows.
+                            </p>
+                        </div>
+                    </article>
+
+                    <!-- Project Card 3: Research Assistant Bot -->
+                    <article class="project-card group border border-border-gray rounded-2xl overflow-hidden bg-off-white">
+                        <div class="aspect-[4/3] bg-gradient-to-br from-soft-black/70 to-soft-black/50 flex items-center justify-center p-8">
+                            <img src="docs/icon-talking-scanner.png" alt="Talking Scanner App" class="w-24 h-24 rounded-2xl shadow-2xl group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <span class="inline-block px-3 py-1 text-xs font-medium bg-border-gray rounded-full mb-4">
+                                RAG / Local LLM
+                            </span>
+                            <h3 class="text-xl font-semibold mb-2">Research Assistant Bot</h3>
+                            <p class="text-muted text-sm leading-relaxed">
+                                A privacy-first internal tool for document research and operations support.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Stack Section -->
+        <section class="py-24 md:py-32 border-t border-border-gray">
+            <div class="max-w-6xl mx-auto px-6">
+                <!-- Section Header -->
+                <div class="mb-12">
+                    <p class="text-sm font-medium text-muted uppercase tracking-wider mb-3">Stack</p>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Technical Expertise</h2>
+                </div>
+
+                <!-- Tags Cloud -->
+                <div class="flex flex-wrap gap-3">
+                    <span class="px-5 py-2.5 bg-white border border-border-gray rounded-full text-sm font-medium hover:border-soft-black/30 hover:bg-soft-black hover:text-off-white transition-all cursor-default">
+                        OpenAI Agents
+                    </span>
+                    <span class="px-5 py-2.5 bg-white border border-border-gray rounded-full text-sm font-medium hover:border-soft-black/30 hover:bg-soft-black hover:text-off-white transition-all cursor-default">
+                        Claude Code
+                    </span>
+                    <span class="px-5 py-2.5 bg-white border border-border-gray rounded-full text-sm font-medium hover:border-soft-black/30 hover:bg-soft-black hover:text-off-white transition-all cursor-default">
+                        Cursor
+                    </span>
+                    <span class="px-5 py-2.5 bg-white border border-border-gray rounded-full text-sm font-medium hover:border-soft-black/30 hover:bg-soft-black hover:text-off-white transition-all cursor-default">
+                        V0
+                    </span>
+                    <span class="px-5 py-2.5 bg-white border border-border-gray rounded-full text-sm font-medium hover:border-soft-black/30 hover:bg-soft-black hover:text-off-white transition-all cursor-default">
+                        Python
+                    </span>
+                    <span class="px-5 py-2.5 bg-white border border-border-gray rounded-full text-sm font-medium hover:border-soft-black/30 hover:bg-soft-black hover:text-off-white transition-all cursor-default">
+                        Local LLMs
+                    </span>
+                    <span class="px-5 py-2.5 bg-white border border-border-gray rounded-full text-sm font-medium hover:border-soft-black/30 hover:bg-soft-black hover:text-off-white transition-all cursor-default">
+                        ElevenLabs
+                    </span>
+                    <span class="px-5 py-2.5 bg-white border border-border-gray rounded-full text-sm font-medium hover:border-soft-black/30 hover:bg-soft-black hover:text-off-white transition-all cursor-default">
+                        Suno
+                    </span>
+                    <span class="px-5 py-2.5 bg-white border border-border-gray rounded-full text-sm font-medium hover:border-soft-black/30 hover:bg-soft-black hover:text-off-white transition-all cursor-default">
+                        CapCut
+                    </span>
+                    <span class="px-5 py-2.5 bg-white border border-border-gray rounded-full text-sm font-medium hover:border-soft-black/30 hover:bg-soft-black hover:text-off-white transition-all cursor-default">
+                        Workflow Automation
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="experience" class="py-24 md:py-32 border-t border-border-gray bg-white">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-16 md:gap-24">
+                    <!-- Experience -->
+                    <div>
+                        <p class="text-sm font-medium text-muted uppercase tracking-wider mb-3">Background</p>
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-10">Experience</h2>
+
+                        <div class="space-y-8">
+                            <article class="relative pl-6 border-l-2 border-soft-black">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 bg-soft-black rounded-full"></div>
+                                <p class="text-sm text-muted mb-1">Feb 2025 – Oct 2025</p>
+                                <h3 class="text-lg font-semibold">ControlAI</h3>
+                                <p class="text-muted">AI Development Contributor</p>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div>
+                        <p class="text-sm font-medium text-muted uppercase tracking-wider mb-3">Background</p>
+                        <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-10">Education</h2>
+
+                        <div class="space-y-8">
+                            <article class="relative pl-6 border-l-2 border-border-gray">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 bg-border-gray rounded-full border-2 border-soft-black"></div>
+                                <p class="text-sm text-muted mb-1">2025</p>
+                                <h3 class="text-lg font-semibold">Prague Humanity Gymnasium</h3>
+                                <p class="text-muted">Prague, Czech Republic</p>
+                            </article>
+
+                            <article class="relative pl-6 border-l-2 border-border-gray">
+                                <div class="absolute -left-[9px] top-0 w-4 h-4 bg-border-gray rounded-full border-2 border-soft-black"></div>
+                                <p class="text-sm text-muted mb-1">2023</p>
+                                <h3 class="text-lg font-semibold">Saint Monica Prep</h3>
+                                <p class="text-muted">USA</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact / CTA Section -->
+        <section id="contact" class="py-24 md:py-32 border-t border-border-gray">
+            <div class="max-w-6xl mx-auto px-6 text-center">
+                <p class="text-sm font-medium text-muted uppercase tracking-wider mb-3">Get in Touch</p>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Let's Work Together</h2>
+                <p class="text-lg text-muted max-w-xl mx-auto mb-10">
+                    Have a project in mind? I'm available for remote collaboration and ready to help you move faster.
+                </p>
+                <a href="mailto:oliver.sukala@gmail.com" class="inline-flex items-center gap-2 px-8 py-4 bg-soft-black text-off-white rounded-full font-medium hover:bg-soft-black/80 transition-colors text-lg">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    Send an Email
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-border-gray bg-white">
+        <div class="max-w-6xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-4 gap-10 md:gap-8">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <p class="text-xl font-bold tracking-tight mb-4">Oliver Súkala</p>
+                    <p class="text-muted text-sm max-w-sm">
+                        AI Automation & Rapid Prototyping Specialist based in Prague. Helping teams move faster with practical AI solutions.
+                    </p>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <p class="font-semibold mb-4">Contact</p>
+                    <ul class="space-y-3 text-sm text-muted">
+                        <li>
+                            <a href="mailto:oliver.sukala@gmail.com" class="hover:text-soft-black transition-colors">
+                                oliver.sukala@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+420601543999" class="hover:text-soft-black transition-colors">
+                                +420 601 543 999
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Location -->
+                <div>
+                    <p class="font-semibold mb-4">Location</p>
+                    <p class="text-sm text-muted">
+                        Prague 4<br>
+                        Czech Republic
+                    </p>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="mt-16 pt-8 border-t border-border-gray flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-muted">
+                    © 2026 Oliver Súkala. All rights reserved.
+                </p>
+                <div class="flex items-center gap-6 text-sm text-muted">
+                    <a href="#services" class="hover:text-soft-black transition-colors">Services</a>
+                    <a href="#work" class="hover:text-soft-black transition-colors">Work</a>
+                    <a href="#experience" class="hover:text-soft-black transition-colors">Experience</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
